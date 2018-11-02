@@ -12,6 +12,10 @@
 		3F8803352188DF9B008B6108 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F8803342188DF9B008B6108 /* main.cpp */; };
 		3F88033D2188E098008B6108 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F88033C2188E098008B6108 /* OpenGL.framework */; };
 		3F8803412188E0F7008B6108 /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8803402188E0F7008B6108 /* libglfw.3.2.dylib */; };
+		3FF874F8218C50CA00527146 /* SOIL2.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FF874F4218C50CA00527146 /* SOIL2.c */; };
+		3FF874F9218C50CA00527146 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FF874F5218C50CA00527146 /* image_helper.c */; };
+		3FF874FA218C50CA00527146 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FF874F6218C50CA00527146 /* image_DXT.c */; };
+		3FF874FB218C50CA00527146 /* etc1_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FF874F7218C50CA00527146 /* etc1_utils.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1373,11 +1377,16 @@
 		3F72ED4B21895C500041FDA2 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../usr/local/Cellar/glew/2.1.0/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
 		3F72ED67218BDE400041FDA2 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		3F72ED68218C23FC0041FDA2 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
+		3F72ED6C218C46D50041FDA2 /* SOIL2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SOIL2; sourceTree = "<group>"; };
 		3F8803312188DF9B008B6108 /* GLFW openGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "GLFW openGL"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8803342188DF9B008B6108 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3F88033C2188E098008B6108 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		3F88033E2188E0C2008B6108 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = "../../../../Developer/glfw-3.3/src/libglfw.3.3.dylib"; sourceTree = "<group>"; };
 		3F8803402188E0F7008B6108 /* libglfw.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.2.dylib; path = "../../../../Developer/glfw-3.2.1/src/libglfw.3.2.dylib"; sourceTree = "<group>"; };
+		3FF874F4218C50CA00527146 /* SOIL2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SOIL2.c; path = "GLFW openGL/SOIL2/SOIL2.c"; sourceTree = "<group>"; };
+		3FF874F5218C50CA00527146 /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_helper.c; path = "GLFW openGL/SOIL2/image_helper.c"; sourceTree = "<group>"; };
+		3FF874F6218C50CA00527146 /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = image_DXT.c; path = "GLFW openGL/SOIL2/image_DXT.c"; sourceTree = "<group>"; };
+		3FF874F7218C50CA00527146 /* etc1_utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = etc1_utils.c; path = "GLFW openGL/SOIL2/etc1_utils.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2929,6 +2938,10 @@
 		3F8803282188DF9B008B6108 = {
 			isa = PBXGroup;
 			children = (
+				3FF874F7218C50CA00527146 /* etc1_utils.c */,
+				3FF874F6218C50CA00527146 /* image_DXT.c */,
+				3FF874F5218C50CA00527146 /* image_helper.c */,
+				3FF874F4218C50CA00527146 /* SOIL2.c */,
 				3F8803332188DF9B008B6108 /* GLFW openGL */,
 				3F8803322188DF9B008B6108 /* Products */,
 				3F88033B2188E098008B6108 /* Frameworks */,
@@ -2946,6 +2959,7 @@
 		3F8803332188DF9B008B6108 /* GLFW openGL */ = {
 			isa = PBXGroup;
 			children = (
+				3F72ED6C218C46D50041FDA2 /* SOIL2 */,
 				3F8803342188DF9B008B6108 /* main.cpp */,
 				3F72ED68218C23FC0041FDA2 /* resources */,
 				3F72ED67218BDE400041FDA2 /* Shader.h */,
@@ -3023,6 +3037,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF874F8218C50CA00527146 /* SOIL2.c in Sources */,
+				3FF874F9218C50CA00527146 /* image_helper.c in Sources */,
+				3FF874FA218C50CA00527146 /* image_DXT.c in Sources */,
+				3FF874FB218C50CA00527146 /* etc1_utils.c in Sources */,
 				3F8803352188DF9B008B6108 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
